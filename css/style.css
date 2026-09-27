@@ -253,8 +253,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- Notice boards with pinned photos ---------- */
 /* boards sit side by side in one row; each board shrinks to fit its photos;
    each photo frame takes the exact shape of its photo (no cropping, no empty space) */
-.boards { display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 18px; margin-top: 24px; overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-.boards:empty { display: none; }
+.boards { display: flex; flex-wrap: nowrap; align-items: stretch; gap: 18px; margin-top: 24px; overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }.boards:empty { display: none; }
 .boards .board { flex: 0 1 auto; }
 .board { --ph: 200px; position: relative; display: inline-block; max-width: 100%; min-width: 0; padding: 16px 20px 24px; border-radius: 16px; border: 1px solid var(--line);
   background-color: color-mix(in srgb, var(--bg-2) 70%, transparent);
