@@ -2,7 +2,7 @@
    Photos not listed here get a 4:5 frame. */
 const PHOTO_RATIO = {
  "20260823_131436.jpg": 1.333,
- "AWD (2).jpg": 0.562,
+ "AWD (2).jpg": 0.5625,
  "AWD (3).jpg": 1.333,
  "AWD.jpg": 0.75,
  "AWD1.jpg": 0.75,
@@ -16,7 +16,7 @@ const PHOTO_RATIO = {
  "Image.jpg": 0.75,
  "Internship (2).jpg": 1.333,
  "Internship.jpg": 2.165,
- "Lab_Work.jpg": 0.562,
+ "Lab_Work.jpg": 0.797,
  "Machinery_Training.jpg": 1.328,
  "Plant_Height.jpg": 0.75,
  "Potato.jpg": 0.75,
