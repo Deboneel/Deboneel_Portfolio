@@ -304,9 +304,10 @@ const SITE = {
   ],
 
   certificates: [
+    { title: "B.Sc. in Agricultural Engineering (Provisional)", by: "Bangladesh Agricultural University", date: "2026", file: "certificates/BSc_Provisional_Certificate.pdf", thumb: "certificates/thumbs/bsc-provisional-certificate.jpg" },
     { title: "Internship, Agricultural & Fisheries Division", by: "CEGIS, Ministry of Water Resources", date: "2026", file: "certificates/CEGIS_Certificate.pdf", thumb: "certificates/thumbs/cegis-internship-certificate.jpg" },
-    { title: "Research Assistant recommendation", by: "Dr. Md. Touhidul Islam, IWM, BAU", date: "2024", file: "certificates/RA_Touhid sir.pdf", thumb: "certificates/thumbs/ra-recommendation-letter.jpg" },
     { title: "Extension field trip", by: "Dept. of Agricultural Extension Education, BAU", date: "2025", file: "certificates/extension_certificate.pdf", thumb: "certificates/thumbs/extension-field-trip-certificate.jpg" },
+    { title: "Research Assistant recommendation", by: "Dr. Md. Touhidul Islam, IWM, BAU", date: "2024", file: "certificates/RA_Touhid sir.pdf", thumb: "certificates/thumbs/ra-recommendation-letter.jpg" },
     { title: "Higher Secondary Certificate", by: "Board of Education, Jashore", date: "2020", file: "certificates/HSC certificates.pdf", thumb: "certificates/thumbs/hsc-certificate.jpg" },
     { title: "Secondary School Certificate", by: "Board of Education, Jashore", date: "2018", file: "certificates/SSC_Certificates.pdf", thumb: "certificates/thumbs/ssc-certificate.jpg" },
     { title: "Junior School Certificate", by: "Board of Education, Jashore", date: "2015", file: "certificates/JSC_Certificates.pdf", thumb: "certificates/thumbs/jsc-certificate.jpg" },

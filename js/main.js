@@ -21,9 +21,16 @@
   };
 
   /* ---------- Links ---------- */
-  const mailto = `mailto:${P.email},${P.academicEmail}?subject=${encodeURIComponent("Hello Deboneel")}`;
+  /* Email: opens Gmail compose with "To" pre-filled (desktop). On phones we keep mailto: so the Gmail/Mail app opens. */
+  const subject = "Hello Deboneel";
+  const gmailFor = to => `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}`;
+  const mailtoFor = to => `mailto:${to}?subject=${encodeURIComponent(subject)}`;
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const mailLink = to => (isMobile ? mailtoFor(to) : gmailFor(to));
+  const mailto = mailLink(P.email);
+  const mailtoAcademic = mailLink(P.academicEmail);
   const wa = `https://wa.me/${P.whatsapp}?text=${encodeURIComponent("Hi Deboneel, I saw your portfolio and would like to get in touch.")}`;
-  $$(".mail-link").forEach(a => (a.href = mailto));
+  $$(".mail-link").forEach(a => { a.href = mailto; if (!isMobile) { a.target = "_blank"; a.rel = "noopener"; } });
   $$(".wa-link").forEach(a => (a.href = wa));
   $$(".li-link").forEach(a => (a.href = P.linkedin));
   $$(".tel-link").forEach(a => (a.href = "tel:" + P.phone));
@@ -171,8 +178,8 @@
     `<li class="reveal"><span class="n">${i + 1}.</span><h3>${esc(n.title)}</h3><p>${esc(n.text)}</p></li>`).join("");
   $("#looking").textContent = "I'm looking for " + S.next.looking.charAt(0).toLowerCase() + S.next.looking.slice(1) + " The fastest way to reach me is email or WhatsApp.";
   const rows = [
-    { ico: "mail", label: "Email", text: P.email, href: mailto, copy: P.email },
-    { ico: "school", label: "University email", text: P.academicEmail, href: mailto, copy: P.academicEmail },
+    { ico: "mail", label: "Email", text: P.email, href: mailto, copy: P.email, ext: !isMobile },
+    { ico: "school", label: "University email", text: P.academicEmail, href: mailtoAcademic, copy: P.academicEmail, ext: !isMobile },
     { ico: "wa", label: "WhatsApp", text: P.phoneDisplay, href: wa, copy: P.phone, ext: true, cls: "wa" },
     { ico: "phone", label: "Phone", text: P.phoneDisplay, href: "tel:" + P.phone, copy: P.phone },
     { ico: "li", label: "LinkedIn", text: "in/deboneelpartho", href: P.linkedin, ext: true, cls: "li" },
